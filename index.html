@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .first {
+            background-color: red;
+            color: white;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+        }
+
+        .second {
+            background-color: blue;
+            color: white;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+        }
+
+        .third {
+            background-color: black;
+            color: white;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+        }
+
+        .fourth {
+            background-color: orange;
+            color: white;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+        }
+
+        /*屏幕宽度大于1200px时*/
+        @media screen and (min-width:1200px) {
+            .bg {
+                width: 1000px;
+                display: flex;
+                margin: 0 auto;
+            }
+
+            .first,
+            .second,
+            .third,
+            .fourth {
+                text-align: center;
+                line-height: 60px;
+                width: 250px;
+                height: 60px;
+            }
+
+        }
+
+        /*屏幕宽度大于992px小于1200px*/
+        @media screen and (min-width:992px) and (max-width:1200px) {
+            .bg {
+                width: 900px;
+                margin: 0 auto;
+                flex-wrap: wrap;
+            }
+
+            .first {
+                text-align: center;
+                width: 100%;
+                display: block;
+            }
+
+            .second,
+            .third,
+            .fourth {
+                text-align: center;
+                width: 300px;
+                float: left;
+            }
+        }
+
+        /*屏幕宽度大于768px小于992px时*/
+        @media screen and (min-width:768px) and (max-width:992px) {
+            .bg {
+                width: 700px;
+                margin: 0 auto;
+            }
+
+            .first,
+            .second,
+            .third,
+            .fourth {
+                text-align: center;
+                width: 350px;
+                float: left;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <div class="first">1</div>
+        <div class="second">2</div>
+        <div class="third">3</div>
+        <div class="fourth">4</div>
+    </div>
+</body>
+
+</html>
